@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import banner2 from "../public/banner2.png";
 import banner from "../public/banner.png";
 import base64 from "base-64";
 import type { NextPage } from "next";
@@ -52,6 +53,17 @@ const Home: NextPage = () => {
           <PageBody></PageBody>
         </div>
       </div>
+      <section className="relative w-full min-h-screen md:h-screen flex md:block flex-col justify-center">
+        <Image
+          priority
+          fill
+          quality={100}
+          className="pointer-events-none select-none"
+          src={banner2}
+          alt="nft banner image2"
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+      </section>
     </>
   );
 };
