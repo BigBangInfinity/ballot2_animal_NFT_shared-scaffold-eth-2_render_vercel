@@ -40,16 +40,16 @@ module.exports = {
       },
       {
         scaffoldEthDark: {
-          primary: "#212638",
+          primary: "#000000",
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
-          "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
+          secondary: "#6E0300",
+          "secondary-content": "#ffffff",
+          accent: "#000000",
           "accent-content": "#F9FBFF",
-          neutral: "#F9FBFF",
-          "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
+          neutral: "#6E0300",
+          "neutral-content": "#ffffff",
+          "base-100": "#000000",
+          "base-200": "#32373D",
           "base-300": "#212638",
           "base-content": "#F9FBFF",
           info: "#385183",
@@ -57,7 +57,7 @@ module.exports = {
           warning: "#FFCF72",
           error: "#FF8863",
 
-          "--rounded-btn": "9999rem",
+          "--rounded-btn": "#36E0300",
 
           ".tooltip": {
             "--tooltip-tail": "6px",
