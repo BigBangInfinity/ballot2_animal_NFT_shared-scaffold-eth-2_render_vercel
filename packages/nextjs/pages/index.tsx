@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import banner2 from "../public/banner2.png";
+import banner from "../public/banner.png";
 import base64 from "base-64";
 import type { NextPage } from "next";
 import { useAccount, useBalance, useContractWrite, useNetwork, useSignMessage } from "wagmi";
@@ -9,6 +12,31 @@ const BALLOT_ADDRESS = process.env.NEXT_PUBLIC_BALLOT_ADDRESS;
 const Home: NextPage = () => {
   return (
     <>
+      <section className="relative w-full min-h-screen md:h-screen flex md:block flex-col justify-center">
+        <Image
+          priority
+          fill
+          quality={100}
+          className="pointer-events-none select-none"
+          src={banner}
+          alt="nft banner image"
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+        <div className="relative z-60 pt-32 md: pt-0 md: top-1/4 1g:top-1/3 ma mx-auto">
+          <div className="max-w-2x1 px-4 flex flex-col gap-9 md: max-x1:bg-white/30 md: max-x1: rourded-2x1">
+            <div className="flex gap-8 font-semibold mt-4">
+              <button
+                type="button"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                className="bg-black/30 hover:bg-black/40 text-white/80 hover:text-white/90 px-4 py-2 rounded-md"
+              >
+                Mint NFT
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="px-5">
           <h1 className="text-center mb-8">
@@ -25,6 +53,17 @@ const Home: NextPage = () => {
           <PageBody></PageBody>
         </div>
       </div>
+      <section className="relative w-full min-h-screen md:h-screen flex md:block flex-col justify-center">
+        <Image
+          priority
+          fill
+          quality={100}
+          className="pointer-events-none select-none"
+          src={banner2}
+          alt="nft banner image2"
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+      </section>
     </>
   );
 };
